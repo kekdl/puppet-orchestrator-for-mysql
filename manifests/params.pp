@@ -13,6 +13,8 @@ class orchestrator::params {
   $service_name      = 'orchestrator'
   $srv_cnf           = '/etc/orchestrator_srv.cnf'
   $topology_cnf      = '/etc/orchestrator.cnf'
+  $user              = 'root'
+  $group             = 'root'
 
   # lint:ignore:140chars
   $config_defaults   = {

@@ -7,9 +7,9 @@ class orchestrator::config inherits orchestrator {
 
   file { $orchestrator::config:
     ensure  => file,
-    owner   => 0,
-    group   => 0,
-    mode    => '0644',
+    owner   => $orchestrator::user,
+    group   => $orchestrator::group,
+    mode    => '0660',
     content => template($orchestrator::config_template),
   }
 

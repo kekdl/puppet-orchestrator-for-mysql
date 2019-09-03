@@ -4,10 +4,14 @@ class orchestrator::my_cnf inherits orchestrator {
 
   file { $orchestrator::topology_cnf:
     content => template($cnf_erb),
-    mode    => '0644',
+    mode    => '0660',
+    owner   => $orchestrator::user,
+    group   => $orchestrator::group,
   }
   file { $orchestrator::srv_cnf:
     content => template($cnf_erb),
-    mode    => '0644',
+    mode    => '0660',
+    owner   => $orchestrator::user,
+    group   => $orchestrator::group,
   }
 }
