@@ -11,6 +11,7 @@ class orchestrator::config inherits orchestrator {
     group   => $orchestrator::group,
     mode    => '0660',
     content => template($orchestrator::config_template),
+    show_diff => false,
   }
 
 }
